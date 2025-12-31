@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>não clique 👀</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background-color: #fff3f7;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    button {
+      padding: 16px 26px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff6f91;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .surpresa {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .surpresa img {
+      width: 220px;
+      animation: pulse 1.5s infinite;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .texto {
+      margin-top: 18px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="botao">
+      aperte o botão pra receber a surpresa, gatinha 😼
+    </button>
+
+    <div class="surpresa" id="surpresa">
+      <img 
+        src="https://i.ibb.co/cXRwY0T0/gatinho-com-buqu-de-flores-bonito-buquet-segurando-ai-gerado-270815796.webp" 
+        alt="Gatinho com buquê de flores">
+      <div class="texto">
+        KETCHUP COM PIZZA É COISA DE LUNÁTICO
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const botao = document.getElementById("botao");
+    const surpresa = document.getElementById("surpresa");
+
+    botao.addEventListener("click", () => {
+      botao.style.display = "none";
+      surpresa.style.display = "block";
+    });
+  </script>
+</body>
+</html>
